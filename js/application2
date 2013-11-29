@@ -1,0 +1,101 @@
+// JavaScript Document
+$(function(){
+  $("#dvContent").append("<ul></ul>");
+  $.ajax({
+    type: "GET",
+    url: "http://elections.vital-creations.com/rss.php",
+    dataType: "json",
+    success: function(xml){
+    /*$(xml).find('item').each(function(){
+      var sTitle = $(this).find('title').text();
+	 
+      $("<li></li>").html(sTitle).appendTo("#dvContent ul");
+    });*/
+	 var data = eval(xml);
+	 
+	 var numArticles = data.items.length-1;
+	 //console.log(eval(xml.rss.channel));
+     for(var i=0; i<data.items.length; i++){
+		var title = data.items[i].article.title;
+		 var decscription = data.items[i].article.description;
+		 var story = data.items[i].article.story; 
+		 var hstory = data.items[0].article.story;
+		 var author = data.items[i].article.author; 
+		 var articleDate = data.items[i].article.articleDate;
+		 var section = data.items[i].article.section;
+		 var photo;
+		 if(typeof (data.items[i].media) === 'undefined'){
+			photo = null;
+			var caption = null;
+			 }else{				 
+				 var photo = data.items[i].media.photo;
+				 var caption = data.items[i].media.caption;
+				 if(i == 0){
+					 var himg = "<div class=\"story-img\"><img src=\"http://elections.nation.co.ke/"+photo+"\" alt=\""+decscription+"\" ></div>";
+					 }
+				 }
+		 //console.log(photo);
+		  if(photo != null ){
+			var picture = "<div class=\"story-img\"><img src=\"http://elections.nation.co.ke/"+photo+"\" alt=\""+decscription+"\" ></div>";
+		 }else{
+			 var picture = '<div class="himg"><img src="http://elections.vital-creations.com/images/app-header.png" alt="Kenya Elections"></div>';
+			 }
+		
+		 var linky = data.items[i].medialinky;
+		 var url = title.trim().replace(/\s/g, '-');
+		 
+		 if(photo != null){
+		 var thumb = '<div class="thumb"><img src="http://elections.nation.co.ke/'+photo+' alt="thumb"></div>';
+		 }else{
+			  var thumb = '<div class="thumb"><img src="images/app-icon.png" alt="thumb"></div>';
+			 }
+			 var n = i+1;
+			 var m = i+2;
+		 var lLinks = thumb+'<a href="#page'+n+'"><h3>'+title+'</h3></a>';
+		 $("<li></li>").html(lLinks).appendTo("#links");
+		 //$("#links").trigger("create");
+		 $('ul').listview('refresh');
+		 
+		 if(i < numArticles){
+			//console.log(i);
+			var next = '<a href="#page'+m+'" class="btn ui-btn-right" data-icon="arrow-r" data-theme="b"  data-iconpos="right">NEXT</a>';
+			 }else{
+				 next = "Last"
+				 }
+			
+		if(i > 0){
+			var backl = '<a href="#" class="ui-btn-left ui-btn-back" data-icon="arrow-l" data-rel="back" data-theme="b">BACK</a>';
+				 }else{
+					 backl = "First";
+					 }
+		 
+		 var header = "<div data-role=\"header\" class=\"header\"><a href=\"#home\" data-icon=\"home\" data-theme=\"b\">Home</a><h1>Kenya Elections</h1></div>";
+		 var footer = "<div data-role=\"footer\" class=\"footer ui-bar\">"+backl+" "+next+"</div>";
+		 //<h4>"+section+"</h4>
+		 var pages = "<div data-role=\"page\" id=\"page"+n+"\"  data-theme=\"b\">"+header+"<div data-role=\"content\"><h3>"+title+"</h3><p>"+author+"<br/><i>"+articleDate+"</i></p>"+picture+" <p>"+story+"</p></div>"+footer+"</div>";
+		 $('body').append(pages);
+		 		
+		 }
+		 $('.hstory').append(himg+hstory);
+
+  },
+  error: function() {
+    alert("The application was unable to fetch data from the server, please check your internet connection.");
+  }
+  });
+});
+
+$('div.ui-page').live("swipeleft", function(){
+var nextpage = $(this).next('div[data-role="page"]');
+if (nextpage.length > 0) {
+$.mobile.changePage(nextpage, {transition: "slide",
+reverse: false}, true, true);
+}
+});
+$('div.ui-page').live("swiperight", function(){
+var prevpage = $(this).prev('div[data-role="page"]');
+if (prevpage.length > 0) {
+$.mobile.changePage(prevpage, {transition: "slide",
+reverse: true}, true, true);
+}
+});

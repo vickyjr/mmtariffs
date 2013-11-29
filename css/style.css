@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:url(../images/app-bg.png);
+	}
+	
+.story-img img, .hstory img{
+	width:100%;
+	max-width:100%;
+	}
+.error, .valueExeed, .valueLess{
+	display:none;
+	color:red;
+	}
+.tariffRange{
+	display:none;
+}
+.himg{
+	width:100%;
+	background-color:#FFF;
+	padding-bottom:10px;
+	text-align:center;
+	max-width:100%;
+	}
+	
+/*.himg img{
+	margin-bottom:10px;
+	}*/
+	
+.header{
+	min-height:40px;
+	}
+	
+.footer{
+	text-align:center;
+	min-height:30px;
+	}
+	
+.thumb{
+	width:80px;
+	height:80px;
+	overflow:hidden;
+	text-align:left;
+	clear:both;
+	position:absolute;
+	z-index:1;
+	margin:5px;
+	}
+	
+.thumb img{
+	max-height:80px;
+}
+
+#links li{
+	max-height:90px;
+	min-height:90px;
+	width:100%;
+	position:relative;
+	
+	}
+
+#links li h3{
+	padding-left:80px;
+	}

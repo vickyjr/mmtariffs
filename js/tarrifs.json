@@ -1,0 +1,23 @@
+{
+	"tariffs":[
+		{"min":10, "max":49, "toMpesaUsers":3, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":"N/A"},
+		{"min":50, "max":100, "toMpesaUsers":5, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":10},
+		{"min":101, "max":500, "toMpesaUsers":27, "toUnregisteredUsers":66, "withdrawalFromAgents":27},
+		{"min":501, "max":1000, "toMpesaUsers":33, "toUnregisteredUsers":66, "withdrawalFromAgents":27},
+		{"min":1001, "max":1500, "toMpesaUsers":33, "toUnregisteredUsers":66, "withdrawalFromAgents":27},
+		{"min":1501, "max":2000, "toMpesaUsers":33, "toUnregisteredUsers":66, "withdrawalFromAgents":27},
+		{"min":2001, "max":2500, "toMpesaUsers":33, "toUnregisteredUsers":88, "withdrawalFromAgents":49},
+		{"min":2501, "max":3500, "toMpesaUsers":33, "toUnregisteredUsers":105, "withdrawalFromAgents":66},
+		{"min":3501, "max":7500, "toMpesaUsers":55, "toUnregisteredUsers":143, "withdrawalFromAgents":82},
+		{"min":7501, "max":10000, "toMpesaUsers":55, "toUnregisteredUsers":171, "withdrawalFromAgents":110},
+		{"min":10001, "max":15000, "toMpesaUsers":55, "toUnregisteredUsers":220, "withdrawalFromAgents":159},
+		{"min":15000, "max":20000, "toMpesaUsers":55, "toUnregisteredUsers":237, "withdrawalFromAgents":176},
+		{"min":20001, "max":25000, "toMpesaUsers":82, "toUnregisteredUsers":275, "withdrawalFromAgents":187},
+		{"min":25000, "max":30000, "toMpesaUsers":82, "toUnregisteredUsers":275, "withdrawalFromAgents":187},
+		{"min":30001, "max":35000, "toMpesaUsers":82, "toUnregisteredUsers":275, "withdrawalFromAgents":187},
+		{"min":35000, "max":40000, "toMpesaUsers":82, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":275},	
+		{"min":40001, "max":45000, "toMpesaUsers":82, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":275},
+		{"min":45001, "max":50000, "toMpesaUsers":110, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":275},
+		{"min":50001, "max":70000, "toMpesaUsers":110, "toUnregisteredUsers":"N/A", "withdrawalFromAgents":330}
+	]
+}
