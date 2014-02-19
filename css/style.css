@@ -1,5 +1,7 @@
 body {
 	background: url(../images/app-bg.png);
+	margin:0;
+	padding:0;
 }
 .story-img img, .hstory img {
 	width: 100%;
