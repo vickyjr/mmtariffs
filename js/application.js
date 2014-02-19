@@ -10,10 +10,10 @@ $(function(){
 		data = tariff;
 	}
 	});
-	console.log(data.tariffs[0].max);
+	//console.log(data.tariffs[0].max);
 	var valueToCheck = $('#valueToCheck');
 	var tariffRange = '';
-	valueToCheck.change(function(){
+	valueToCheck.on('change keyup paste', function(){
 		if(!isNaN(valueToCheck.val())){
 			$('.error').hide();
 			$(".tariffRange").hide();

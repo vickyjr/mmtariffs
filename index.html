@@ -1,81 +1,72 @@
 <!doctype html>
 <html>
-		<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Mobile Money Tarrifs</title>
-		<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.2.0.css" />
-		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
-		<link type="text/css" rel="stylesheet" href="css/extensions/jquery.mmenu.widescreen.css" media="all and (min-width: 900px)" />
-		<link type="text/css" rel="stylesheet" href="css/extensions/jquery.mmenu.themes.css" media="all and (min-width: 900px)" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
-		<script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-		<script language="javascript" type="text/javascript" src="js/application.js"></script>
-		<script language="javascript" type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
-		<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('nav#menu').mmenu({
-					classes: 'mm-light'
-				});
-			});
-		</script>
-		</head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile Money Tarrifs</title>
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
 
-		<body>
-        <div>
-          <div data-role="page" id="home">
-            <div data-role="header" class="header"><a href="#menu" data-icon="home" data-theme="b">Home</a>
-              <h1>M-Pesa Tariffs app</h1>
-              </div>
-            <div data-role="content">
-              <div class="ui-grid-solo">
-                <div class="himg"> <img src="images/safaricom-banner.jpg" alt="M-Pesa Tariffs"> </div>
-              </div>
-              <div class="ui-grid-solo">
-                <input id="valueToCheck" placeholder="Enter amount eg 1000">
-                <p class="error">Please enter a valid amount</p>
-                <p class="valueExeed">The amount you entered exceed the amount M-pesa can transact at any one point (7000) - you entered Ksh <span> </span></p>
-                <p class="valueLess">The amount you entered is less than the amount that M-pesa can transact at any one point (10) - you entered Ksh <span> </span></p>
-                <p class="tariffRange">Range <b></b></p>
-                <p class="toMpesaUsers">Transfer to other M-PESA Users <b> </b></p>
-                <p class="toUnregisteredUsers">Transfer to Unregistered Users <b> </b></p>
-                <p class="withdrawalFromAgents">Withdrawal from M-PESA Agent <b> </b></p>
-                <p class="ATMWithdrawal">ATM Withdrawal <b> </b></p>
-              </div>
-            </div>
-            <div data-role="footer" class="footer ui-bar">
-              <p>&copy; 2013 Vital Creations all rights reserved</p>
-            </div>
-          </div>
-          <div data-role="page" id="about">
-                <div data-role="header" class="header"><a href="#menu" data-icon="home" data-theme="b">Home</a>
-              <h1>About M-PESA Tariffs</h1>
-            </div>
-            <div data-role="content">
-          M-PESA Tariffs
-<p>M-PESA charges will depend on the amount you are sending or
-withdrawing. You can use your M-PESA menu to buy airtime for
-your phone, or for someone else. This service is free and you will
-only pay for the airtime purchased.</p>
-  </div>
-            <div data-role="footer" class="footer ui-bar">
-              <p>&copy; 2013 Vital Creations all rights reserved</p>
-            </div>
-          </div>
-          <nav id="menu">
-            <ul>
-              <li class="Selected"><a href="#home">Home</a></li>
-              <li><a href="#about">About M-PESA Tariffs</a></li>
-              <li><a href="vertical-submenus.html">Vertical submenus example</a></li>
-              <li><a href="photos.html">Photos in sliding panels</a></li>
-              <li><a href="positions.html">Positioning the menu</a></li>
-              <li><a href="colors.html">Coloring the menu</a></li>
-              <li><a href="advanced.html">Advanced example</a></li>
-              <li><a href="onepage.html">One page scrolling example</a></li>
-              <li><a href="jqmobile/index.html">jQuery Mobile example</a></li>
-            </ul>
-          </nav>
+<body>
+<div class="off-canvas-wrap">
+  <div class="inner-wrap"> 
+    <!-- Off Canvas Menu -->
+    <aside id="lefty" class="left-off-canvas-menu"> 
+      <!-- whatever you want goes here -->
+      <!---
+      <ul id="side-nav-menus"  class="side-nav side-nav-menus">
+        <li><a href="#">YOUR WORK</a></li>
+        <li><a href="#">SEARCH</a></li>
+      </ul>
+      --->
+    <p>
+    <strong>Mobile Money Tariffs</strong> is a simple app that will help you calculate how much you will be charged for a <strong>Mobile Money </strong>transaction. For now the app can only provide <strong>Mpesa Tariffs</strong>. 
+    </p>  
+
+    <a class="vickyjr-twitter" href="https://twitter.com/intent/user?screen_name=vickyjr" target="_blank">Follow @Vickyjr</a><br/><br/>
+	<a class="vickyjr-fb" href="http://facebook.com/vickyjr88" target="_blank">Friend Vickyjr on Facebook</a>
+
+    </aside>
+    <div id="nav-bar" class="row">
+      <div class="small-1 columns"> <a class="left-off-canvas-toggle" > <span class="toggle-drawer"></span> </a></div>
+      <div class="small-10 center columns">
+        <h2>M-Pesa Tariffs App</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 column">
+        <div class="row">
+          <div class="himg small-12 column"> <img src="images/safaricom-banner.jpg" alt="M-Pesa Tariffs"> </div>
         </div>
+        <div class="row">
+          <div class="small-12 column">
+          <br/>
+            <input type="text" id="valueToCheck" placeholder="Enter amount eg 1000">
+            <p class="error">Please enter a valid amount</p>
+            <p class="valueExeed">The amount you entered exceed the amount M-pesa can transact at any one point (7000) - you entered Ksh <span> </span></p>
+            <p class="valueLess">The amount you entered is less than the amount that M-pesa can transact at any one point (10) - you entered Ksh <span> </span></p>
+            <p class="tariffRange">Range <b></b></p>
+            <p class="toMpesaUsers">Transfer to other M-PESA Users <b> </b></p>
+            <p class="toUnregisteredUsers">Transfer to Unregistered Users <b> </b></p>
+            <p class="withdrawalFromAgents">Withdrawal from M-PESA Agent <b> </b></p>
+            <p class="ATMWithdrawal">ATM Withdrawal <b> </b></p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="footer" class="row">
+        <div class="small-11 center column"><p>&copy; 2013 Vital Creations all rights reserved</p></div>
+      </div>
+    
+  </div>
+</div>
+<script src="js/vendor/modernizr.js"></script> 
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script> 
+<script language="javascript" type="text/javascript" src="js/application.js"></script> 
+<script src="js/foundation.min.js"></script> 
+<script>
+      $(document).foundation();
+    </script>
 </body>
 </html>

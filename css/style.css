@@ -83,3 +83,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afe563', end
 .ATMWithdrawal{
 	display:none;
 	}
+	
+.toggle-drawer {
+	display: block;
+	height: 30px;
+	width: 8px;
+	background:url(../img/sprite.png);
+	margin:13px 5px;
+}
+#nav-bar{
+	background:#73B744;
+}
+#footer{
+	background:#73B744;
+	color:#fff;
+	padding-top:15px;
+	text-align:center;
+	}
+#nav-bar h2{
+	color:#fff;
+	}
+	
+#lefty{
+	padding:10px;
+	color:#fff;
+	}
+#lefty a{
+	color:#fff;
+	}
+#lefty .vickyjr-twitter{
+	color:#55ACEE;
+	}
+#lefty .vickyjr-fb{
+	color:#405D9A;
+	}
