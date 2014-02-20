@@ -117,3 +117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afe563', end
 #lefty .vickyjr-fb{
 	color:#405D9A;
 	}
+#left-toggle-btn{
+	display:block;
+	padding:0 10px;
+	}
