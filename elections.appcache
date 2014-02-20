@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# 2013-01-18:v2
+
+# Explicitly cached entries
+index.html
+css/foundation.min.css
+css/normalize.css
+css/style.css
+
+js/foundation.min.js
+js/application.js
+js/jquery.js
+
+js/tarrifs.json
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+/ /offline.html
+
+# All other resources (e.g. sites) require the user to be online. 
+NETWORK:
+*
+
+# Additional resources to cache
+CACHE:
+images/sprite.png
+images/safaricom-banner.jpg
+img/sprite.png
+img/icon-128.png
