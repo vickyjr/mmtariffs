@@ -1,0 +1,19 @@
+{
+"name": "Kenya Election",
+  
+	"description": "Mobile Money Tariffs is a simple app that will help you calculate how 
+	much you will be charged for a Mobile Money transaction. 
+	For now the app can only provide Mpesa Tariffs",
+  
+	"launch_path": "/index.html",
+  
+	"icons": {
+    "128": "/img/icon-128.png"
+  },
+  	"developer": {
+    "name": "Vicky Junior",    
+	"url": "http://titter.com/vickyjr"
+  },
+  
+	"default_locale": "en"
+}
